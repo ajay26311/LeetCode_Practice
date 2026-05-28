@@ -1,12 +1,21 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-        
-        int freq[] = new int[10];
+
+        int xor = 0;
 
         for(int i = 0; i < nums.length; i++)
         {
+            xor = xor ^ nums[i];
+        }
+
+        return xor;
+    }
+}
+
+/*for(int i = 0; i < nums.length; i++)
+        {
             int count = 0;
-            
+
             if(i > 0 && nums[i] == nums[i-1])
             {
                 continue;
@@ -24,6 +33,4 @@ class Solution {
                 return nums[i];
             }
         }
-        return 0;
-    }
-}
+        return 0;*/
