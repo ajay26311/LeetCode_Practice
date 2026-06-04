@@ -1,0 +1,18 @@
+class Solution {
+    public int xorOperation(int n, int start) {
+
+        int nums[] = new int[n];
+        int res = 0;
+
+        for(int i = 0; i < nums.length; i++)
+        {
+            nums[i] = start + 2 * i;
+
+        }
+        for(int i = 0; i < nums.length; i++)
+        {
+            res  = res ^ nums[i];
+        }
+        return res;  
+    }
+}
