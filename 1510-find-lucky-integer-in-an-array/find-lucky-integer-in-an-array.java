@@ -1,30 +1,24 @@
 class Solution {
     public int findLucky(int[] arr) {
         
-        Arrays.sort(arr);
-        int ans = -1;
+        int[] freq=new int[1000];
 
-        int i = 0;
-
-        while(i < arr.length)
-        {
-            int count = 1;
-            int num = arr[i];
-
-            while(i + 1 < arr.length && arr[i] == arr[i + 1])
-            {
-                count++;
-                i++;
-            }
-
-            if(count == num)
-            {
-                ans = num;
-            }
-
-            i++;
+        for(int i=0;i<arr.length;i++){
+            freq[arr[i]]++;
         }
 
-        return ans;
+        int max=0;
+
+        for(int i=0;i<freq.length;i++){
+            if(freq[i]==i){
+                max=Math.max(max,i);
+            }
+        }
+
+        if(max!=0){
+            return max;
+        }
+
+        return -1;
     }
 }
