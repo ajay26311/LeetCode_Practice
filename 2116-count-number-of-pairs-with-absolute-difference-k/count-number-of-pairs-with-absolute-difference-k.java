@@ -7,8 +7,7 @@ class Solution {
         {
             for(int j = i+1; j < nums.length; j++)
             {
-                int diff = Math.abs(nums[i] - nums[j]);
-                if(diff == k)
+                if(Math.abs((nums[i] - nums[j])) == k)
                 {
                     count++;
                 }
