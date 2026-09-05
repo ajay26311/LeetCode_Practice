@@ -1,6 +1,9 @@
 class Solution {
     public String removeTrailingZeros(String num) {
-        
-        return num.replaceAll("0+$", "").replaceAll("\\.$", "");
+        int i=num.length()-1;
+        while(num.charAt(i)=='0'){
+            i--;
+        }
+        return num.substring(0,i+1);
     }
 }
