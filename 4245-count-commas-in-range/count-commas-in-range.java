@@ -9,6 +9,11 @@ class Solution {
         // }
         // return count;
 
-        return (n >= 1000) ? (n - 999) : 0;
+        // return (n >= 1000) ? (n - 999) : 0;
+
+        if(n<1000){
+            return 0;
+        }
+        return n - 999;
     }
 }
