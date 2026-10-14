@@ -1,6 +1,17 @@
 class Solution {
     public int digitFrequencyScore(int n) {
-        int freq[] = new int[10];
+        int sum = 0;
+        
+        while(n > 0){
+            int rem = n % 10;
+            sum += rem;
+            n = n / 10;
+        }
+        return sum;
+    }
+}
+
+/* int freq[] = new int[10];
 
         while(n > 0){
             int rem = n % 10;
@@ -13,6 +24,4 @@ class Solution {
         for(int i = 0; i < 10; i++){
             score += i * freq[i];
         }
-        return score;
-    }
-}
+        return score;*/
